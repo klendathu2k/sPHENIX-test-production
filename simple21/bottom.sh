@@ -19,6 +19,9 @@ echo output:
 echo ${IN1[@]}
 echo ${IN2[@]}
 
+tar tvf ${IN1[@]}
+tar tvf ${IN2[@]}
+
 echo ========== ls -la 
 ls -la 
 
