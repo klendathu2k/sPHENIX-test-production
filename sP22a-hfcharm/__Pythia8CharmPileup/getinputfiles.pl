@@ -1,0 +1,1 @@
+/direct/sphenix+u/jwebb2/work/2022/SHREK/MDC2/submit/HF_pp200_signal/pass2/rundir/getinputfiles.pl
