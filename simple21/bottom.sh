@@ -48,5 +48,6 @@ tar tvzf `readlink -f *top1outDS*`
 echo ==========
 
 touch results.root
+ls > results.root
 cp results.root /sphenix/u/sphnxpro/shrek/results-${uniqueId}
 cp _${name}.log /sphenix/u/sphnxpro/shrek/_${name}-${uniqueId}.log
