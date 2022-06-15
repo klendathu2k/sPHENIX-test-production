@@ -42,5 +42,5 @@ steps:
         opt_exec:
           default: "Pythia8CharmPileup.sh  %RNDM:0 %IN %IN2 >& _Pythia8CharmPileup.log "
         opt_args:
-          default: " --maxAttempt 3  --outputs blah.root  --nFilesPerJob=1 --secondaryDSs IN2:2:%{DS1} --forceStaged  --forceStagedSecondary  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --maxAttempt 3  --outputs blah.root  --nFilesPerJob=1 --secondaryDSs IN2:10:%{DS1} --forceStaged  --forceStagedSecondary  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]

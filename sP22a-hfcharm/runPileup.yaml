@@ -13,7 +13,7 @@ InputDataSets:
     nFilesPerJob: 1
   - name: Pythia8MinbSimulation/outDS
     match: Pythia8MinbSimulation.outDS.tar
-    nFilesPerJob: 2
+    nFilesPerJob: 10
 
 OutputDataSets:
   - name: Pythia8CharmPileup/outDS
@@ -48,8 +48,8 @@ JobCommands: |-
   echo Signal: ${signal}                 
   echo Background: `cat background.list` 
 
-  touch blah.root
-  ls -l  *.root
+  echo Directory contents
+  ls -l
 
   echo END   ${name} `date` 
 

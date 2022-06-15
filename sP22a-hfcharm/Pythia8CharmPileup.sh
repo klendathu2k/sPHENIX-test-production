@@ -39,8 +39,8 @@ done
 echo Signal: ${signal}                 
 echo Background: `cat background.list` 
 
-touch blah.root
-ls -l  *.root
+echo Directory contents
+ls -l
 
 echo END   ${name} `date` 
 
