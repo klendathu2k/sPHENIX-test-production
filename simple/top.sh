@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export uniqueId=$1 
+export uniqueId=$1
 export name=top
 export comment=Simple chain from panda examples
 export nJobs=3
