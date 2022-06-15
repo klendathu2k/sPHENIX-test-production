@@ -1,0 +1,56 @@
+Parameters:
+  name: Pythia8CharmPileup
+  build: mdc2.7
+  comment: This is a test job definition
+  macro: Fun4All_G4_pileup_pp.C
+  flavor: Charm  
+  nEvents: 1
+  maxAttempt: 3
+ 
+InputDataSets:
+  - name: Pythia8CharmSimulation/outDS
+    match: Pythia8CharmSimulation.outDS.tar
+    nFilesPerJob: 1
+  - name: Pythia8MinbSimulation/outDS
+    match: Pythia8MinbSimulation.outDS.tar
+    nFilesPerJob: 2
+
+OutputDataSets:
+  - name: Pythia8CharmPileup/outDS
+    comment: Charm events plus minbias pileup
+    filelist:
+    - "required: blah.root"
+
+Resources:
+  - file: ../MDC2/submit/HF_pp200_signal/pass2/rundir/*
+
+JobCommands: |-
+  echo START ${name} `date` 
+
+  # Initialize sPHENIX software environment
+  source /opt/sphenix/core/bin/sphenix_setup.sh ${build}
+
+  # Input file
+  mcin=${IN1[0]}
+  
+  echo ARGV:       $@       
+  echo Signal:     ${IN1[@]}  
+  echo Background: ${IN2[@]}
+
+  export signal=`tar xvf ${mcin}`
+
+  touch background.list
+  for i in "${IN2[@]}"
+  do
+     tar xvf $i >> background.list
+  done
+
+  echo Signal: ${signal}                 
+  echo Background: `cat background.list` 
+
+  touch blah.root
+  ls -l  *.root
+
+  echo END   ${name} `date` 
+
+  cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
