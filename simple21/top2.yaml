@@ -1,7 +1,7 @@
 Parameters:
   name: top2
   comment: "Simple chain from panda examples"
-  nJobs: 1
+  nJobs: 2
 
 OutputDataSets:
   - name: top2/outDS
@@ -11,8 +11,7 @@ OutputDataSets:
 JobCommands: |-
   echo $uniqueId > seed2.txt
   tar cvf top2outDS.tar seed2.txt
-  cp seed2.txt /sphenix/u/sphnxpro/shrek/seed2-${uniqueId}
 
-
-
+# cp seed2.txt /sphenix/u/sphnxpro/shrek/seed2-${uniqueId}
+# cp _${name}.log /sphenix/u/sphnxpro/shrek/_${name}-${uniqueId}.log
 

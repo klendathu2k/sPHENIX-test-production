@@ -12,7 +12,7 @@ JobCommands: |-
   echo $uniqueId > seed1.txt
   tar cvf top1outDS.tar seed1.txt
 
-  cp seed1.txt /sphenix/u/sphnxpro/shrek/seed1-${uniqueId}
-
+# cp seed1.txt /sphenix/u/sphnxpro/shrek/seed1-${uniqueId}
+# cp _${name}.log /sphenix/u/sphnxpro/shrek/_${name}-${uniqueId}.log
 
 

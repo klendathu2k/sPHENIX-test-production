@@ -27,7 +27,7 @@ steps:
         opt_exec:
           default: "top2.sh  %RNDM:0 >& _top2.log "
         opt_args:
-          default: " --nJobs 1  --maxAttempt 1  --outputs top2outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --nJobs 2  --maxAttempt 1  --outputs top2outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
   bottom:
