@@ -3,7 +3,7 @@
 export uniqueId=$1
 export name=top2
 export comment=Simple chain from panda examples
-export nJobs=2
+export nJobs=1
 
 
 echo $uniqueId > seed2.txt

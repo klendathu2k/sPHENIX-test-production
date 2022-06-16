@@ -30,10 +30,15 @@ JobCommands: |-
   export in2=`readlink -f ${IN2[@]}`
   export dir1=`dirname ${in1}`
   export dir2=`dirname ${in2}`
+  echo ${dir1}
+  echo ${dir2}
+  echo "Listing directories where the files should be..."
   ls -l ${dir1} ${dir2}
+
+  echo "Listing ..."
+  ls /home/tmp/atlas*/PanDA_Pilot*/user.jwebb2*
  
   touch results.root
   ls > results.root
-  #cp results.root /sphenix/u/sphnxpro/shrek/results-${uniqueId}
 
   cp _${name}.log /sphenix/u/sphnxpro/shrek/_${name}-${uniqueId}.log
