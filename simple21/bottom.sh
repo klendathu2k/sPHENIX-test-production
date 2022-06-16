@@ -28,7 +28,16 @@ echo ${dir2}
 echo "Listing directories where the files should be..."
 ls -l ${dir1} ${dir2}
 
-echo "Listing ..."
+echo "Listing ... /home/tmp"
+ls /home/tmp/
+
+echo "Listing ... /home/tmp/atlas*/"
+ls /home/tmp/atlas*/
+
+echo "Listing ... /home/tmp/atlas*/PanDA_Pilot*/"
+ls /home/tmp/atlas*/PanDA_Pilot*/
+
+echo "Listing ... /home/tmp/atlas*/PanDA_Pilot*/user.jwebb2*"
 ls /home/tmp/atlas*/PanDA_Pilot*/user.jwebb2*
 
 touch results.root
