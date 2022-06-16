@@ -22,6 +22,9 @@ echo output:
 echo ${IN1[@]}
 echo ${IN2[@]}
 
+ls -l `readlink -f ${IN1[@]}`
+ls -l `readlink -f ${IN2[@]}`
+
 touch results.root
 ls > results.root
 #cp results.root /sphenix/u/sphnxpro/shrek/results-${uniqueId}
