@@ -7,3 +7,4 @@
 |simple21|2022-06-17 19:38:44.465526|[153bb16](https://github.com/klendathu2k/sPHENIX-test-production/tree/153bb16/simple21)|
 |simple21|2022-06-17 19:39:54.285075|[d61284e](https://github.com/klendathu2k/sPHENIX-test-production/tree/d61284e/simple21)|
 |simple21|2022-06-17 19:41:13.266726|[5a3f124](https://github.com/klendathu2k/sPHENIX-test-production/tree/5a3f124/simple21)|
+|simple21|2022-06-20 13:34:57.623469|[69887e9](https://github.com/klendathu2k/sPHENIX-test-production/tree/69887e9/simple21)|
