@@ -2,7 +2,7 @@ Parameters:
   name: Pythia8CharmPileup
   build: mdc2.7
   comment: This is a test job definition
-  macro: Fun4All_G4_pileup_pp.C
+  macro: Fun4All_G4_Pileup_pp.C
   flavor: Charm  
   nEvents: 1
   maxAttempt: 3
