@@ -36,11 +36,21 @@ do
    tar xvf $i >> background.list
 done
 
+echo ======================================================================================
 echo Signal: ${signal}                 
 echo Background: `cat background.list` 
 
-echo Directory contents
-ls -l
+echo ======================================================================================
+echo Directory contents before job execution
+ls -l 
+
+echo ======================================================================================
+echo Executing the pileup task...
+root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
+
+echo ======================================================================================
+echo Directory contents after job execution
+ls -l 
 
 echo END   ${name} `date` 
 
