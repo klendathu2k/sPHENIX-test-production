@@ -17,7 +17,7 @@ export maxAttempt=3
 echo START ${name} `date` 
 
 # Initialize sPHENIX software environment
-source /opt/sphenix/core/bin/sphenix_setup.sh ${build}
+source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
 
 rn=$( printf "%010d" $runnumber )
 sn=$( printf "%05d"  $uniqueId )

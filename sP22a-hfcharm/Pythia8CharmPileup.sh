@@ -19,7 +19,7 @@ export maxAttempt=3
 echo START ${name} `date` 
 
 # Initialize sPHENIX software environment
-source /opt/sphenix/core/bin/sphenix_setup.sh ${build}
+source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
 
 # Input file
 mcin=${IN1[0]}
@@ -46,6 +46,16 @@ ls -l
 
 echo ======================================================================================
 echo Executing the pileup task...
+
+# echo arg1 \(output events\) : $1
+# echo arg2 \(input file\): $2
+# echo arg3 \(background listfile\): $3
+# echo arg4 \(output dir\): $4
+# echo arg5 \(quarkfilter\): $5
+# echo arg6 \(runnumber\): $6
+# echo arg7 \(sequence\): $7
+# root.exe -q -b Fun4All_G4_Pileup_pp.C\($1,\"$2\",\"$3\",\"$4\",\"$5\"\)
+
 root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
 
 echo ======================================================================================
