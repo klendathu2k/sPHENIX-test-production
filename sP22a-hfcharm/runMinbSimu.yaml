@@ -6,7 +6,7 @@ Parameters:
   nEvents: 1
   macro: Fun4All_G4_Pass1_pp.C
   flavor: ppminbias  
-  runnumber: 1234567890
+  runnumber: 1
   maxAttempt: 3
 
 Resources:

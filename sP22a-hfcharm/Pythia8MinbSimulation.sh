@@ -10,7 +10,7 @@ export nJobs=10
 export nEvents=1
 export macro=Fun4All_G4_Pass1_pp.C
 export flavor=ppminbias
-export runnumber=1234567890
+export runnumber=1
 export maxAttempt=3
 
 
