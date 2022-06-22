@@ -35,4 +35,5 @@ tar cvf Pythia8MinbSimulation.outDS.tar ${filename}
 echo END   ${name} `date` 
 cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
 
-cp *.root /sphenix/u/sphnxpro/shrek/
+mkdir /sphenix/user/sphnxpro/shrek/minb
+cp * /sphenix/user/sphnxpro/shrek/minb

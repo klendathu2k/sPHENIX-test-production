@@ -32,4 +32,5 @@ tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
 echo END   ${name} `date` 
 cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
 
-cp *.root /sphenix/u/sphnxpro/shrek/
+mkdir /sphenix/user/sphnxpro/shrek/charm
+cp * /sphenix/user/sphnxpro/shrek/charm
