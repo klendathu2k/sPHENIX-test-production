@@ -2,6 +2,7 @@
 
 # Stage resources into working directory
 cp -R __Pythia8CharmSimulation/* .
+echo $@
 export uniqueId=$1
 export name=Pythia8CharmSimulation
 export build=mdc2.7

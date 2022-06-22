@@ -2,6 +2,7 @@
 
 # Stage resources into working directory
 cp -R __Pythia8CharmPileup/* .
+echo $@
 export uniqueId=$1
 export IN1_name=Pythia8CharmSimulation/outDS
 export IN1=(`echo $2 | tr "," " "`)
