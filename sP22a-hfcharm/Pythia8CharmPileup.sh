@@ -65,3 +65,7 @@ ls -l
 echo END   ${name} `date` 
 
 cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
+
+
+# Stage everything for debugging
+cp * /sphenix/u/sphnxpro/shrek/test
