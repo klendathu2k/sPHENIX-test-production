@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo $@
 export uniqueId=$1
 export name=top
 export comment=Simple chain from panda examples
