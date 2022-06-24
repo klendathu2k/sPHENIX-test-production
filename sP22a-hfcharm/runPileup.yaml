@@ -77,6 +77,5 @@ JobCommands: |-
  
 
   # Stage everything for debugging
-  mkdir /sphenix/user/sphnxpro/shrek/pup
   cp * /sphenix/user/sphnxpro/shrek/pup
   

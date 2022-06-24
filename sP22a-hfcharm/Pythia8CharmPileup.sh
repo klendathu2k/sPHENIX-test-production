@@ -69,5 +69,4 @@ cp _${name}.log /sphenix/user/sphnxpro/shrek/${name}-${uniqueId}.log
 
 
 # Stage everything for debugging
-mkdir /sphenix/user/sphnxpro/shrek/pup
 cp * /sphenix/user/sphnxpro/shrek/pup
