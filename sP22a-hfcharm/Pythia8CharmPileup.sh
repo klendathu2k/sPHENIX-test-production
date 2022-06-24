@@ -66,5 +66,3 @@ ls -l
 echo END   ${name} `date` 
 
 cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
-
-cp * /sphenix/u/sphnxpro/shrek/pup/
