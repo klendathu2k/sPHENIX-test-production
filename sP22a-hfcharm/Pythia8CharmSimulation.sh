@@ -25,9 +25,17 @@ sn=$( printf "%05d"  $uniqueId )
 
 filename=G4Hits-${flavor}-${rn}-${sn}.root
 root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\) >& runCharmSimu-${uniqueId}.funlog
+ls -la ${filename}
 
 # Add output to the tar file
 tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
+tar xvf Pythia8CharmSimulation.outDS.tar
+ls -la ${filename}
+
+root.exe <<+++
+TFile::Open( "${filename}" );
+gFile->ls();
++++
 
 echo END   ${name} `date` 
 cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
