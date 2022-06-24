@@ -3,7 +3,7 @@ Parameters:
   build: mdc2.7
   comment: Generate Pythia8 Minb Events and run through F4A
   nJobs:   10
-  nEvents: 1
+  nEvents: 10
   macro: Fun4All_G4_Pass1_pp.C
   flavor: ppminbias  
   runnumber: 1
@@ -46,6 +46,11 @@ JobCommands: |-
   echo END   ${name} `date` >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
 
   cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
+
+  cp * /sphenix/u/sphnxpro/shrek/minb/
+
+
+
 
 
   

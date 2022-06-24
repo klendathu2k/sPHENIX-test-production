@@ -8,7 +8,7 @@ export name=Pythia8CharmSimulation
 export build=mdc2.7
 export comment=Generate Pythia8 Charm Events and run through F4A
 export nJobs=1
-export nEvents=5
+export nEvents=10
 export macro=Fun4All_G4_HF_pp_signal.C
 export flavor=Charm
 export runnumber=1
@@ -39,3 +39,5 @@ gFile->ls();
 
 echo END   ${name} `date` 
 cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
+
+cp * /sphenix/u/sphnxpro/shrek/charm/

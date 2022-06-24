@@ -8,7 +8,7 @@ export name=Pythia8MinbSimulation
 export build=mdc2.7
 export comment=Generate Pythia8 Minb Events and run through F4A
 export nJobs=10
-export nEvents=1
+export nEvents=10
 export macro=Fun4All_G4_Pass1_pp.C
 export flavor=ppminbias
 export runnumber=1
@@ -40,3 +40,5 @@ echo END   ${name} `date`
 echo END   ${name} `date` >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
 
 cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
+
+cp * /sphenix/u/sphnxpro/shrek/minb/
