@@ -31,10 +31,11 @@ hepmc=`ls *-${sn}.dat`
 filename=G4Hits-${flavor}-${rn}-${sn}.root
 echo $filename >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
 
-root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) >& /sphenix/u/sphnxpro/PanDa/runMinbSimu-${uniqueId}.funlog
-tar cvf Pythia8MinbSimulation.outDS.tar ${filename}
+#root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) >& /sphenix/u/sphnxpro/PanDa/runMinbSimu-${uniqueId}.funlog
 
-tar tvf Pythia8MinbSimulation.outDS.tar >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
+touch ${filename}
+tar cvf Pythia8MinbSimulation.outDS.tar ${filename}  
+#tar tvf Pythia8MinbSimulation.outDS.tar >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
 
 echo END   ${name} `date` 
 echo END   ${name} `date` >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1

@@ -19,7 +19,7 @@ OutputDataSets:
   - name: Pythia8CharmPileup/outDS
     comment: Charm events plus minbias pileup
     filelist:
-    - "required: blah.root"
+    - "required: *.root"
 
 Resources:
   - file: ../MDC2/submit/HF_pp200_signal/pass2/rundir/*
@@ -65,7 +65,7 @@ JobCommands: |-
   # echo arg7 \(sequence\): $7
   # root.exe -q -b Fun4All_G4_Pileup_pp.C\($1,\"$2\",\"$3\",\"$4\",\"$5\"\)
 
-  root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
+  #root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
 
   echo ======================================================================================
   echo Directory contents after job execution

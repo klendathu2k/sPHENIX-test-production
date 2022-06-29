@@ -24,19 +24,18 @@ rn=$( printf "%010d" $runnumber )
 sn=$( printf "%05d"  $uniqueId )
 
 filename=G4Hits-${flavor}-${rn}-${sn}.root
-root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\) >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
-ls -la ${filename} >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
+#root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\) >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
+#ls -la ${filename} >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
 
 
 # Add output to the tar file
-tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
-tar xvf Pythia8CharmSimulation.outDS.tar  >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
-ls -la ${filename} >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
+#tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
+#tar xvf Pythia8CharmSimulation.outDS.tar  >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
 
-root.exe <<+++  
-TFile::Open( "${filename}" );
-gFile->ls();
-+++
+touch ${filename}
+tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
+
+ls -la ${filename} >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
 
 echo END   ${name} `date` 
 echo END   ${name} `date` >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1

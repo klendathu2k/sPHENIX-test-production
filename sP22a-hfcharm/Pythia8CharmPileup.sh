@@ -57,7 +57,7 @@ echo Executing the pileup task...
 # echo arg7 \(sequence\): $7
 # root.exe -q -b Fun4All_G4_Pileup_pp.C\($1,\"$2\",\"$3\",\"$4\",\"$5\"\)
 
-root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
+#root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
 
 echo ======================================================================================
 echo Directory contents after job execution
