@@ -28,11 +28,11 @@ root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\) >
 ls -la ${filename} >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
 
 # Add output to the tar file
-tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
-tar xvf Pythia8CharmSimulation.outDS.tar  >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
-
-#touch ${filename}
 #tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
+#tar xvf Pythia8CharmSimulation.outDS.tar  >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
+
+touch ${filename}
+tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
 
 ls -la ${filename} >> /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log1
 
