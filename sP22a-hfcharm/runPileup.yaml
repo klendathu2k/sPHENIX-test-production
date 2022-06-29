@@ -13,7 +13,7 @@ InputDataSets:
     nFilesPerJob: 1
   - name: Pythia8MinbSimulation/outDS
     match: Pythia8MinbSimulation.outDS.tar
-    nFilesPerJob: 10
+    nFilesPerJob: 1
 
 OutputDataSets:
   - name: Pythia8CharmPileup/outDS
