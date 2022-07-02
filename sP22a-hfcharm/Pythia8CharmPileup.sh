@@ -13,7 +13,7 @@ export build=mdc2.7
 export comment=This is a test job definition
 export macro=Fun4All_G4_Pileup_pp.C
 export flavor=Charm
-export nEvents=1
+export nEvents=10
 export maxAttempt=3
 
 
@@ -57,7 +57,7 @@ echo Executing the pileup task...
 # echo arg7 \(sequence\): $7
 # root.exe -q -b Fun4All_G4_Pileup_pp.C\($1,\"$2\",\"$3\",\"$4\",\"$5\"\)
 
-#root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
+root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
 
 echo ======================================================================================
 echo Directory contents after job execution

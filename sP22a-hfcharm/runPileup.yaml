@@ -4,7 +4,7 @@ Parameters:
   comment: This is a test job definition
   macro: Fun4All_G4_Pileup_pp.C
   flavor: Charm  
-  nEvents: 1
+  nEvents: 10
   maxAttempt: 3
  
 InputDataSets:
@@ -65,7 +65,7 @@ JobCommands: |-
   # echo arg7 \(sequence\): $7
   # root.exe -q -b Fun4All_G4_Pileup_pp.C\($1,\"$2\",\"$3\",\"$4\",\"$5\"\)
 
-  #root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
+  root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
 
   echo ======================================================================================
   echo Directory contents after job execution
