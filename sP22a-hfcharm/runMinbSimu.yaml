@@ -3,7 +3,7 @@ Parameters:
   build: mdc2.8
   comment: Generate Pythia8 Minb Events and run through F4A
   nJobs:   5
-  nEvents: 10
+  nEvents: 1
   macro: Fun4All_G4_Pass1_pp.C
   flavor: ppminbias  
   runnumber: 1
@@ -35,8 +35,8 @@ JobCommands: |-
 
   filename=G4Hits-${flavor}-${rn}-${sn}.root
 
-  # root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) 
-  touch $filename
+  root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) 
+  #touch $filename
 
   tar cvf Pythia8MinbSimulation.outDS.tar ${filename}  
   ls -l

@@ -8,7 +8,7 @@ export name=Pythia8CharmSimulation
 export build=mdc2.8
 export comment=Generate Pythia8 Charm Events and run through F4A
 export nJobs=1
-export nEvents=10
+export nEvents=1
 export macro=Fun4All_G4_HF_pp_signal.C
 export flavor=Charm
 export runnumber=1
@@ -25,7 +25,7 @@ sn=$( printf "%05d"  $uniqueId )
 
 filename=G4Hits-${flavor}-${rn}-${sn}.root
 root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\) >& /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.root.log 
-touch $filename
+#touch $filename
 
 # Add output to the tar file
 tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
