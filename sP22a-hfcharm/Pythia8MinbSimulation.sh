@@ -29,10 +29,11 @@ hepmc=`ls *-${sn}.dat`
 
 filename=G4Hits-${flavor}-${rn}-${sn}.root
 
-#root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) 
-touch $filename
+root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) 
+#touch $filename
 
 tar cvf Pythia8MinbSimulation.outDS.tar ${filename}  
+ls -l
 
 echo END   ${name} `date` 
 
