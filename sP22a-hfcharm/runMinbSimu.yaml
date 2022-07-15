@@ -1,8 +1,8 @@
 Parameters:
   name: Pythia8MinbSimulation
-  build: mdc2.7
+  build: mdc2.8
   comment: Generate Pythia8 Minb Events and run through F4A
-  nJobs:   5
+  nJobs:   10
   nEvents: 10
   macro: Fun4All_G4_Pass1_pp.C
   flavor: ppminbias  
@@ -23,7 +23,6 @@ OutputDataSets:
 JobCommands: |-
   echo START ${name} `date` 
 
-
   # Initialize sPHENIX software environment
   source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
 
@@ -36,7 +35,7 @@ JobCommands: |-
 
   filename=G4Hits-${flavor}-${rn}-${sn}.root
 
-  root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) >& /sphenix/u/sphnxpro/PanDa/runMinbSimu-${uniqueId}.funlog
+  root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) 
 
   tar cvf Pythia8MinbSimulation.outDS.tar ${filename}  
 

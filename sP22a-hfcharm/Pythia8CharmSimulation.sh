@@ -5,7 +5,7 @@ cp -R __Pythia8CharmSimulation/* .
 echo $@
 export uniqueId=$1
 export name=Pythia8CharmSimulation
-export build=mdc2.7
+export build=mdc2.8
 export comment=Generate Pythia8 Charm Events and run through F4A
 export nJobs=1
 export nEvents=10

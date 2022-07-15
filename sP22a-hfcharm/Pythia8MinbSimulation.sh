@@ -5,9 +5,9 @@ cp -R __Pythia8MinbSimulation/* .
 echo $@
 export uniqueId=$1
 export name=Pythia8MinbSimulation
-export build=mdc2.7
+export build=mdc2.8
 export comment=Generate Pythia8 Minb Events and run through F4A
-export nJobs=5
+export nJobs=10
 export nEvents=10
 export macro=Fun4All_G4_Pass1_pp.C
 export flavor=ppminbias
@@ -16,7 +16,6 @@ export maxAttempt=3
 
 
 echo START ${name} `date` 
-
 
 # Initialize sPHENIX software environment
 source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
@@ -30,7 +29,7 @@ hepmc=`ls *-${sn}.dat`
 
 filename=G4Hits-${flavor}-${rn}-${sn}.root
 
-root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) >& /sphenix/u/sphnxpro/PanDa/runMinbSimu-${uniqueId}.funlog
+root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) 
 
 tar cvf Pythia8MinbSimulation.outDS.tar ${filename}  
 

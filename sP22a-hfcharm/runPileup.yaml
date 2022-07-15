@@ -1,6 +1,6 @@
 Parameters:
   name: Pythia8CharmPileup
-  build: mdc2.7
+  build: mdc2.8
   comment: This is a test job definition
   macro: Fun4All_G4_Pileup_pp.C
   flavor: Charm  
@@ -13,13 +13,13 @@ InputDataSets:
     nFilesPerJob: 1
   - name: Pythia8MinbSimulation/outDS
     match: Pythia8MinbSimulation.outDS.tar
-    nFilesPerJob: 1
+    nFilesPerJob: 25
 
 OutputDataSets:
   - name: Pythia8CharmPileup/outDS
     comment: Charm events plus minbias pileup
     filelist:
-    - "required: *.root"
+    - "required: DST_*.root"
 
 Resources:
   - file: ../MDC2/submit/HF_pp200_signal/pass2/rundir/*
