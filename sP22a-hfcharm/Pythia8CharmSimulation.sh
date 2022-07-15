@@ -24,7 +24,8 @@ rn=$( printf "%010d" $runnumber )
 sn=$( printf "%05d"  $uniqueId )
 
 filename=G4Hits-${flavor}-${rn}-${sn}.root
-root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\)
+#root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\)
+touch $filename
 
 # Add output to the tar file
 tar cvf Pythia8CharmSimulation.outDS.tar ${filename}

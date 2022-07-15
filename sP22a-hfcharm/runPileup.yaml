@@ -13,7 +13,7 @@ InputDataSets:
     nFilesPerJob: 1
   - name: Pythia8MinbSimulation/outDS
     match: Pythia8MinbSimulation.outDS.tar
-    nFilesPerJob: 25
+    nFilesPerJob: 5
 
 OutputDataSets:
   - name: Pythia8CharmPileup/outDS
@@ -65,7 +65,8 @@ JobCommands: |-
   # echo arg7 \(sequence\): $7
   # root.exe -q -b Fun4All_G4_Pileup_pp.C\($1,\"$2\",\"$3\",\"$4\",\"$5\"\)
 
-  root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
+  #root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${flavor}\"\)
+  touch DST_blah.root
 
   echo ======================================================================================
   echo Directory contents after job execution
