@@ -3,7 +3,7 @@ Parameters:
   build: mdc2.8
   comment: Generate Pythia8 Charm Events and run through F4A
   nJobs:   1    # create 10 jobs
-  nEvents: 5    # 100 events per job
+  nEvents: 1    # 100 events per job
   macro: Fun4All_G4_HF_pp_signal.C
   flavor: Charm  
   runnumber: 1
@@ -25,6 +25,14 @@ JobCommands: |-
 
   # Initialize sPHENIX software environment
   source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
+
+  echo Working directory
+  pwd
+  du --human-readable .
+  df --human-readable .
+
+
+
 
   rn=$( printf "%010d" $runnumber )
   sn=$( printf "%05d"  $uniqueId )

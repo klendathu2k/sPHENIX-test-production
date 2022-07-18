@@ -8,7 +8,7 @@ export name=Pythia8CharmSimulation
 export build=mdc2.8
 export comment=Generate Pythia8 Charm Events and run through F4A
 export nJobs=1
-export nEvents=5
+export nEvents=1
 export macro=Fun4All_G4_HF_pp_signal.C
 export flavor=Charm
 export runnumber=1
@@ -19,6 +19,14 @@ echo START ${name} `date`
 
 # Initialize sPHENIX software environment
 source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
+
+echo Working directory
+pwd
+du --human-readable .
+df --human-readable .
+
+
+
 
 rn=$( printf "%010d" $runnumber )
 sn=$( printf "%05d"  $uniqueId )
