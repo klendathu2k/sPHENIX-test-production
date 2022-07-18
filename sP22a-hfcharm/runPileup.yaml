@@ -19,7 +19,7 @@ OutputDataSets:
   - name: Pythia8CharmPileup/outDS
     comment: Charm events plus minbias pileup
     filelist:
-    - "required: DST_*.root"
+    - "required:Pythia8Pileup.outDS.tar"
 
 Resources:
   - file: ../MDC2/submit/HF_pp200_signal/pass2/rundir/*
@@ -69,6 +69,8 @@ JobCommands: |-
 
   # Force successful job completion b/c PanDA
   touch DST_blah.root 
+  
+  tar cvf Pythia8Pileup.outDS.tar DST_*.root
 
   echo ======================================================================================
   echo Directory contents after job execution

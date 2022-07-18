@@ -62,6 +62,8 @@ root.exe -q -b ${macro}\(${nEvents},\"${signal}\",\"background.list\",\".\",\"${
 # Force successful job completion b/c PanDA
 touch DST_blah.root 
 
+tar cvf Pythia8Pileup.outDS.tar DST_*.root
+
 echo ======================================================================================
 echo Directory contents after job execution
 ls -l 

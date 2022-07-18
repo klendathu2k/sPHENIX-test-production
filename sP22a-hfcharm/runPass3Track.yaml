@@ -1,0 +1,37 @@
+Parameters:
+  name: Pythia8Pass3Track
+  build: mdc2.8
+  comment: This is a test job definition
+  macro: Fun4All_G4_Pass3Trk.C
+  flavor: Charm  
+  nEvents: 1
+  maxAttempt: 3
+
+InputDataSets:
+  - name: Pythia8CharmPileup/outDS
+    comment: Charm events plus minbias pileup
+    match: Pythia8Pileup.outDS.tar
+    nFilesPerJob: 1
+
+Resources:
+  - file: ../MDC2/submit/HF_pp200_signal/pass3trk/rundir/*
+
+JobCommands: |-
+  echo START ${name} `date` 
+
+  # Initialize sPHENIX software environment
+  source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
+
+  # Input file
+  mcin=${IN1[0]}
+  
+  echo ARGV:       $@       
+  echo inputs:     ${IN1[@]}  
+
+  tar xvf ${IN1[@]}
+
+  ls
+
+  echo END   ${name} `date` 
+
+  cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
