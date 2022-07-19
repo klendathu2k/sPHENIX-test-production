@@ -6,14 +6,10 @@ requirements:
   MultipleInputFeatureRequirement: {}
 inputs: []
 # Pythia8Calorimeter : output=Pythia8Calorimeter/outDS
-# Pythia8Pass3Track : output=Pythia8Pass3Track/outDS
-# Pythia8Pass4Track : output=Pythia8Pass4Track/outDS
 outputs:
   outDS:
     type: string
     outputSource: Pythia8Calorimeter/outDS
-    outputSource: Pythia8Pass3Track/outDS
-    outputSource: Pythia8Pass4Track/outDS
 
 steps:
   Pythia8CharmSimulation:
@@ -57,30 +53,6 @@ steps:
           default: Pythia8Pileup.outDS.tar
         opt_exec:
           default: "Pythia8Calorimeter.sh  %RNDM:0 %IN >& _Pythia8Calorimeter.log "
-        opt_args:
-          default: " --maxAttempt 3  --outputs blah.root  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
-    out: [outDS]
-
-  Pythia8Pass3Track:
-    run: prun
-    in:
-        opt_inDS: Pythia8CharmPileup/outDS
-        opt_inDsType:
-          default: Pythia8Pileup.outDS.tar
-        opt_exec:
-          default: "Pythia8Pass3Track.sh  %RNDM:0 %IN >& _Pythia8Pass3Track.log "
-        opt_args:
-          default: " --maxAttempt 3  --outputs blah.root  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
-    out: [outDS]
-
-  Pythia8Pass4Track:
-    run: prun
-    in:
-        opt_inDS: Pythia8CharmPileup/outDS
-        opt_inDsType:
-          default: Pythia8Pileup.outDS.tar
-        opt_exec:
-          default: "Pythia8Pass4Track.sh  %RNDM:0 %IN >& _Pythia8Pass4Track.log "
         opt_args:
           default: " --maxAttempt 3  --outputs blah.root  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
