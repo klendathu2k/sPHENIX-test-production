@@ -45,11 +45,12 @@ tar xvf ${IN1[@]}
 # DST_VERTEX_pythia8_Charm_3MHz-0000000001-00001.root
 
 dst_track=`ls DST_TRKR*.root`
-dst_truth_`ls DST_TRUTH*.root`
+dst_truth=`ls DST_TRUTH*.root`
 outfile=dst_pass3track_output.root
 
 #root.exe -q -b  Fun4All_G4_Pass3Trk.C\($1,\"$2\",\"$3\",\"\",\"\",0,\"$4\",\"$5\"\)
 echo   root.exe -q -b  Fun4All_G4_Pass3Trk.C\($1,\"${dst_track}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
+root.exe -q -b  Fun4All_G4_Pass3Trk.C\($1,\"${dst_track}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
 
 
 # NOTE: This packs all input files as well...
