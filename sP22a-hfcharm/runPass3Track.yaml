@@ -54,7 +54,7 @@ JobCommands: |-
   dst_trkr=DST_TRKR_G4HIT*.root
   dst_truth=DST_TRUTH_G4HIT*.root
 
-  root.exe -q -b  ${macro}\(${nEvents},\"${dst_trkr}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
+  echo  root.exe -q -b  ${macro}\(${nEvents},\"${dst_trkr}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
 
   echo END   ${name} `date` 
 
