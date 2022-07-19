@@ -9,7 +9,7 @@ export IN1=(`echo $2 | tr "," " "`)
 export name=Pythia8Pass3Track
 export build=mdc2.8
 export comment=This is a test job definition
-export macro=Fun4All_G4_Calo.C
+export macro=Fun4All_G4_Pass3Trk.C
 export flavor=Charm
 export nEvents=1
 export maxAttempt=3
@@ -29,14 +29,14 @@ echo inputs:     ${IN1[@]}
 tar xvf ${IN1[@]}
 
 # arguments 
-# $1: number of events
-# $2: calo g4hits input file
-# $3: vertex input file
-# $4: output file
-# $5: output dir
-# $6: quark filter
-# $7: run number
-# $8: sequence
+# arguments                                                                                                                                                                                                
+# $1: number of events                                                                                                                                                                                     
+# $2: track g4hits input file                                                                                                                                                                              
+# $3: truth g4hits input file                                                                                                                                                                              
+# $4: output dir                                                                                                                                                                                           
+# $5: quark filter                                                                                                                                                                                         
+# $6: run number                                                                                                                                                                                           
+# $7: sequence  
 
 # DST_BBC_G4HIT_pythia8_Charm_3MHz-0000000001-00001.root
 # DST_CALO_G4HIT_pythia8_Charm_3MHz-0000000001-00001.root
@@ -44,11 +44,13 @@ tar xvf ${IN1[@]}
 # DST_TRUTH_G4HIT_pythia8_Charm_3MHz-0000000001-00001.root
 # DST_VERTEX_pythia8_Charm_3MHz-0000000001-00001.root
 
-dst_calo=`ls DST_CALO_G4HIT*.root`
-dst_vert=`ls DST_VERTEX*.root`
-outfile=dst_calo_output.root
+dst_track=`ls DST_TRKR*.root`
+dst_truth_`ls DST_TRUTH*.root`
+outfile=dst_pass3track_output.root
 
-#root.exe -q -b  ${macro}\(${nEvents},\"${dst_calo}\",\"${dst_vert}\",\"${outfile}\",\".\"\)
+#root.exe -q -b  Fun4All_G4_Pass3Trk.C\($1,\"$2\",\"$3\",\"\",\"\",0,\"$4\",\"$5\"\)
+echo   root.exe -q -b  Fun4All_G4_Pass3Trk.C\($1,\"${dst_track}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
+
 
 # NOTE: This packs all input files as well...
 touch meh.root
