@@ -9,7 +9,7 @@ export IN1=(`echo $2 | tr "," " "`)
 export name=Pythia8Pass3Track
 export build=mdc2.8
 export comment=This is a test job definition
-export macro=Fun4All_G4_Pass3Trk.C
+export macro=Fun4All_G4_Calo.C
 export flavor=Charm
 export nEvents=1
 export maxAttempt=3
@@ -30,12 +30,13 @@ tar xvf ${IN1[@]}
 
 # arguments 
 # $1: number of events
-# $2: track g4hits input file
-# $3: truth g4hits input file
-# $4: output dir
-# $5: quark filter
-# $6: run number
-# $7: sequence
+# $2: calo g4hits input file
+# $3: vertex input file
+# $4: output file
+# $5: output dir
+# $6: quark filter
+# $7: run number
+# $8: sequence
 
 # DST_BBC_G4HIT_pythia8_Charm_3MHz-0000000001-00001.root
 # DST_CALO_G4HIT_pythia8_Charm_3MHz-0000000001-00001.root
@@ -43,10 +44,17 @@ tar xvf ${IN1[@]}
 # DST_TRUTH_G4HIT_pythia8_Charm_3MHz-0000000001-00001.root
 # DST_VERTEX_pythia8_Charm_3MHz-0000000001-00001.root
 
-dst_trkr=DST_TRKR_G4HIT*.root
-dst_truth=DST_TRUTH_G4HIT*.root
+dst_calo=`ls DST_CALO_G4HIT*.root`
+dst_vert=`ls DST_VERTEX*.root`
+outfile=dst_calo_output.root
 
-echo  root.exe -q -b  ${macro}\(${nEvents},\"${dst_trkr}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
+#root.exe -q -b  ${macro}\(${nEvents},\"${dst_calo}\",\"${dst_vert}\",\"${outfile}\",\".\"\)
+
+# NOTE: This packs all input files as well...
+touch meh.root
+tar cvf Pythia8Pass3Track.outDS.tar *.root 
+
+ls 
 
 echo END   ${name} `date` 
 
