@@ -13,6 +13,12 @@ InputDataSets:
     match: Pythia8Pileup.outDS.tar
     nFilesPerJob: 1
 
+OutputDataSets:
+  - name: Pythia8Pass3Track/outDS
+    comment: Pythia8 events
+    filelist:
+       - "required:blah.root"
+
 Resources:
   - file: ../MDC2/submit/HF_pp200_signal/pass3trk/rundir/*
 
@@ -31,6 +37,8 @@ JobCommands: |-
   tar xvf ${IN1[@]}
 
   ls
+
+  touch blah.root
 
   echo END   ${name} `date` 
 

@@ -30,6 +30,8 @@ tar xvf ${IN1[@]}
 
 ls
 
+touch blah.root
+
 echo END   ${name} `date` 
 
 cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log

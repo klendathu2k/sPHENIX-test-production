@@ -13,6 +13,14 @@ InputDataSets:
     match: Pythia8Pileup.outDS.tar
     nFilesPerJob: 1
 
+OutputDataSets:
+  - name: Pythia8Calorimeter/outDS
+    comment: Pythia8 events
+    filelist:
+       - "required:blah.root"
+
+
+
 Resources:
   - file: ../MDC2/submit/HF_pp200_signal/pass3calo/rundir/*
 
@@ -31,6 +39,8 @@ JobCommands: |-
   tar xvf ${IN1[@]}
 
   ls
+
+  touch blah.root
 
   echo END   ${name} `date` 
 
