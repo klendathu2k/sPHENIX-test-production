@@ -2,7 +2,7 @@ Parameters:
   name: Pythia8Pass4Track
   build: mdc2.8
   comment: This is a test job definition
-  macro: Fun4All_G4_Pass4Trk.C
+  macro: Fun4All_G4_Trkr.C
   flavor: Charm  
   nEvents: 1
   maxAttempt: 3
