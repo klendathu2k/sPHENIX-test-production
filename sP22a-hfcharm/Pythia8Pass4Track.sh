@@ -51,7 +51,7 @@ outfile=dst_pass4track_output.root
 
 #root.exe -q -b  Fun4All_G4_Pass4Trk.C\($1,\"$2\",\"$3\",\"\",\"\",0,\"$4\",\"$5\"\)
 echo   root.exe -q -b  Fun4All_G4_Pass4Trk.C\($1,\"${dst_track}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
-root.exe -q -b  Fun4All_G4_Pass4Trk.C\($1,\"${dst_track}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
+root.exe -q -b  ${macro}\($1,\"${dst_track}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
 
 # NOTE: This packs all input files as well...
 touch meh.root
