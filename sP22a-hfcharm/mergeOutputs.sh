@@ -28,6 +28,9 @@ echo Background: ${IN2[@]}
 tar xvf ${IN1[0]}
 tar xvf ${IN2[0]}
 
+# Pack everything up...
+tar cvf Pythia8CharmOutput.outDS.tar *.root
+
 echo END   ${name} `date` 
 
 cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
