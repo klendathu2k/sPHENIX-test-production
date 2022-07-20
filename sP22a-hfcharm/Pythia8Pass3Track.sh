@@ -52,12 +52,8 @@ outfile=dst_pass3track_output.root
 echo   root.exe -q -b  Fun4All_G4_Pass3Trk.C\($1,\"${dst_track}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
 root.exe -q -b  Fun4All_G4_Pass3Trk.C\($1,\"${dst_track}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
 
-
 # NOTE: This packs all input files as well...
-touch meh.root
 tar cvf Pythia8Pass3Track.outDS.tar *.root 
-
-ls 
 
 echo END   ${name} `date` 
 
