@@ -4,7 +4,7 @@ echo $@
 export uniqueId=$1
 export IN1_name=Pythia8Calorimeter/outDS
 export IN1=(`echo $2 | tr "," " "`)
-export IN2_name=Pythia8Pass3Track/outDS
+export IN2_name=Pythia8Pass4Track/outDS
 export IN2=(`echo $3 | tr "," " "`)
 export name=mergeOutputs
 export build=mdc2.8

@@ -9,8 +9,8 @@ InputDataSets:
   - name: Pythia8Calorimeter/outDS
     match: Pythia8Calorimeter.outDS.tar
     nFilesPerJob: 1
-  - name: Pythia8Pass3Track/outDS
-    match: Pythia8Pass3Track.outDS.tar
+  - name: Pythia8Pass4Track/outDS
+    match: Pythia8Pass4Track.outDS.tar
     nFilesPerJob: 1
 
 OutputDataSets:

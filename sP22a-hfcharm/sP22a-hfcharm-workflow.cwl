@@ -5,10 +5,12 @@ class: Workflow
 requirements:
   MultipleInputFeatureRequirement: {}
 inputs: []
+# Pythia8Pass3Track : output=Pythia8Pass3Track/outDS
 # mergeOutputs : output=Pythia8CharmOutput/outDS
 outputs:
   outDS:
     type: string
+    outputSource: Pythia8Pass3Track/outDS
     outputSource: Pythia8CharmOutput/outDS
 
 steps:
@@ -75,9 +77,9 @@ steps:
         opt_inDS: Pythia8Calorimeter/outDS
         opt_inDsType:
           default: Pythia8Calorimeter.outDS.tar
-        opt_secondaryDSs: [Pythia8Pass3Track/outDS]
+        opt_secondaryDSs: [Pythia8Pass4Track/outDS]
         opt_secondaryDsTypes:
-          default: [Pythia8Pass3Track.outDS.tar]
+          default: [Pythia8Pass4Track.outDS.tar]
         opt_exec:
           default: "mergeOutputs.sh  %RNDM:1300 %IN %IN2 >& _mergeOutputs.log "
         opt_args:
