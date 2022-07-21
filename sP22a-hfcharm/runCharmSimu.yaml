@@ -3,11 +3,12 @@ Parameters:
   build: mdc2.8
   comment: Generate Pythia8 Charm Events and run through F4A
   nJobs:   1    # create 10 jobs
-  nEvents: 10    # 100 events per job
+  nEvents: 1    # 100 events per job
   macro: Fun4All_G4_HF_pp_signal.C
   flavor: Charm  
   runnumber: 1
   maxAttempt: 1
+  memory: 8192
 
 Resources:
   - file: ../MDC2/submit/HF_pp200_signal/pass1/rundir/*

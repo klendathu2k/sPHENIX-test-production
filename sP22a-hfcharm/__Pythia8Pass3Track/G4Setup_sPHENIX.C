@@ -1,1 +1,0 @@
-/direct/sphenix+u/jwebb2/work/2022/SHREK/MDC2/submit/HF_pp200_signal/pass3trk/rundir/G4Setup_sPHENIX.C
