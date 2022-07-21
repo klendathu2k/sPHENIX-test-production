@@ -3,6 +3,12 @@
 # Stage resources into working directory
 cp -R __Pythia8CharmSimulation/* .
 echo $@
+
+Executing on `hostname`
+uname -a
+lscpu | grep \^CPU
+free -h --giga
+
 export uniqueId=$1
 export name=Pythia8CharmSimulation
 export build=mdc2.8

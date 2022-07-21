@@ -3,6 +3,12 @@
 # Stage resources into working directory
 cp -R __Pythia8Pass4Track/* .
 echo $@
+
+Executing on `hostname`
+uname -a
+lscpu | grep \^CPU
+free -h --giga
+
 export uniqueId=$1
 export IN1_name=Pythia8Pass3Track/outDS
 export IN1=(`echo $2 | tr "," " "`)

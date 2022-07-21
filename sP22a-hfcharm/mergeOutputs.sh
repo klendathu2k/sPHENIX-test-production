@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 echo $@
+
+Executing on `hostname`
+uname -a
+lscpu | grep \^CPU
+free -h --giga
+
 export uniqueId=$1
 export IN1_name=Pythia8Calorimeter/outDS
 export IN1=(`echo $2 | tr "," " "`)
