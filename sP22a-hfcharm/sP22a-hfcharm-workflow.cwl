@@ -16,18 +16,18 @@ steps:
     run: prun
     in:
         opt_exec:
-          default: "Pythia8CharmSimulation.sh  %RNDM:10000 >& _Pythia8CharmSimulation.log "
+          default: "Pythia8CharmSimulation.sh  %RNDM:20000 >& _Pythia8CharmSimulation.log "
         opt_args:
-          default: " --nJobs 1  --maxAttempt 3  --outputs Pythia8CharmSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --nJobs 1  --maxAttempt 1  --outputs Pythia8CharmSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
   Pythia8MinbSimulation:
     run: prun
     in:
         opt_exec:
-          default: "Pythia8MinbSimulation.sh  %RNDM:10000 >& _Pythia8MinbSimulation.log "
+          default: "Pythia8MinbSimulation.sh  %RNDM:20000 >& _Pythia8MinbSimulation.log "
         opt_args:
-          default: " --nJobs 5  --maxAttempt 3  --outputs Pythia8MinbSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --nJobs 5  --maxAttempt 1  --outputs Pythia8MinbSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
   Pythia8CharmPileup:
@@ -40,9 +40,9 @@ steps:
         opt_secondaryDsTypes:
           default: [Pythia8MinbSimulation.outDS.tar]
         opt_exec:
-          default: "Pythia8CharmPileup.sh  %RNDM:10000 %IN %IN2 >& _Pythia8CharmPileup.log "
+          default: "Pythia8CharmPileup.sh  %RNDM:20000 %IN %IN2 >& _Pythia8CharmPileup.log "
         opt_args:
-          default: " --maxAttempt 3  --outputs Pythia8Pileup.outDS.tar  --nFilesPerJob=1 --secondaryDSs IN2:5:%{DS1} --forceStaged  --forceStagedSecondary  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --maxAttempt 1  --outputs Pythia8Pileup.outDS.tar  --nFilesPerJob=1 --secondaryDSs IN2:5:%{DS1} --forceStaged  --forceStagedSecondary  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
   Pythia8Calorimeter:
@@ -52,7 +52,7 @@ steps:
         opt_inDsType:
           default: Pythia8Pileup.outDS.tar
         opt_exec:
-          default: "Pythia8Calorimeter.sh  %RNDM:10000 %IN >& _Pythia8Calorimeter.log "
+          default: "Pythia8Calorimeter.sh  %RNDM:20000 %IN >& _Pythia8Calorimeter.log "
         opt_args:
           default: " --maxAttempt 3  --outputs Pythia8Calorimeter.outDS.tar  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
@@ -64,7 +64,7 @@ steps:
         opt_inDsType:
           default: Pythia8Pileup.outDS.tar
         opt_exec:
-          default: "Pythia8Pass3Track.sh  %RNDM:10000 %IN >& _Pythia8Pass3Track.log "
+          default: "Pythia8Pass3Track.sh  %RNDM:20000 %IN >& _Pythia8Pass3Track.log "
         opt_args:
           default: " --maxAttempt 3  --outputs Pythia8Pass3Track.outDS.tar  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
@@ -76,7 +76,7 @@ steps:
         opt_inDsType:
           default: Pythia8Pass3Track.outDS.tar
         opt_exec:
-          default: "Pythia8Pass4Track.sh  %RNDM:10000 %IN >& _Pythia8Pass4Track.log "
+          default: "Pythia8Pass4Track.sh  %RNDM:20000 %IN >& _Pythia8Pass4Track.log "
         opt_args:
           default: " --maxAttempt 3  --outputs Pythia8Pass4Track.outDS.tar  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
@@ -91,7 +91,7 @@ steps:
         opt_secondaryDsTypes:
           default: [Pythia8Pass4Track.outDS.tar]
         opt_exec:
-          default: "mergeOutputs.sh  %RNDM:10000 %IN %IN2 >& _mergeOutputs.log "
+          default: "mergeOutputs.sh  %RNDM:20000 %IN %IN2 >& _mergeOutputs.log "
         opt_args:
           default: " --maxAttempt 3  --outputs Pythia8CharmOutput.outDS.tar  --nFilesPerJob=1 --secondaryDSs IN2:1:%{DS1} --forceStaged  --forceStagedSecondary  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]

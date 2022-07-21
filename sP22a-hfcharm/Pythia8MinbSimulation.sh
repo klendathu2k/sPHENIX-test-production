@@ -8,11 +8,11 @@ export name=Pythia8MinbSimulation
 export build=mdc2.8
 export comment=Generate Pythia8 Minb Events and run through F4A
 export nJobs=5
-export nEvents=1
+export nEvents=10
 export macro=Fun4All_G4_Pass1_pp.C
 export flavor=ppminbias
 export runnumber=1
-export maxAttempt=3
+export maxAttempt=1
 
 
 echo START ${name} `date` 

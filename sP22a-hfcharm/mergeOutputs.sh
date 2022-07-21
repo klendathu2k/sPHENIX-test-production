@@ -9,7 +9,6 @@ export IN2=(`echo $3 | tr "," " "`)
 export name=mergeOutputs
 export build=mdc2.8
 export comment=Merge all outputs into a single tarball
-export nEvents=1
 export maxAttempt=3
 
 

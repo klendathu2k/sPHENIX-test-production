@@ -8,11 +8,11 @@ export name=Pythia8CharmSimulation
 export build=mdc2.8
 export comment=Generate Pythia8 Charm Events and run through F4A
 export nJobs=1
-export nEvents=1
+export nEvents=10
 export macro=Fun4All_G4_HF_pp_signal.C
 export flavor=Charm
-export runnumber=1
-export maxAttempt=3
+export runnumber=10
+export maxAttempt=1
 
 
 echo START ${name} `date` 
