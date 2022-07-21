@@ -6,7 +6,7 @@ Parameters:
   nEvents: 10    # 100 events per job
   macro: Fun4All_G4_HF_pp_signal.C
   flavor: Charm  
-  runnumber: 10
+  runnumber: 1
   maxAttempt: 1
 
 Resources:

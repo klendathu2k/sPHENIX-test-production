@@ -17,7 +17,7 @@ export nJobs=1
 export nEvents=10
 export macro=Fun4All_G4_HF_pp_signal.C
 export flavor=Charm
-export runnumber=10
+export runnumber=1
 export maxAttempt=1
 
 
