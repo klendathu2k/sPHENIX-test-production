@@ -3,11 +3,13 @@ Parameters:
   build: mdc2.8
   comment: Generate Pythia8 Minb Events and run through F4A
   nJobs:   5
-  nEvents: 1
+  nEvents: 10
   macro: Fun4All_G4_Pass1_pp.C
   flavor: ppminbias  
   runnumber: 1
   maxAttempt: 1
+  memory: 8192
+  dumpTaskParams: Pythia8MinbSimulation.params.json
 
 Resources:
   - file: ../MDC2/submit/pythia8_pp_mb/pass1/rundir/*

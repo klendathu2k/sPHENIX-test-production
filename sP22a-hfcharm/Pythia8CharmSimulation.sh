@@ -40,8 +40,8 @@ rn=$( printf "%010d" $runnumber )
 sn=$( printf "%05d"  $uniqueId )
 
 filename=G4Hits-${flavor}-${rn}-${sn}.root
-root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\) >& /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.root.log 
-#touch $filename
+root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\)
+
 
 # Add output to the tar file
 tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
