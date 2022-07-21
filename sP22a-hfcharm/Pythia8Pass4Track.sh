@@ -46,8 +46,10 @@ tar xvf ${IN1[@]}
 # DST_TRKR_HIT
 
 dst_track=`ls DST_TRKR_HIT*.root`
-dst_truth=`ls DST_TRUTH*.root`
+dst_truth=`ls DST_TRUTH_G4HIT*.root`
 outfile=dst_pass4track_output.root
+
+echo DST_TRUTH: $dst_truth
 
 #root.exe -q -b  Fun4All_G4_Pass4Trk.C\($1,\"$2\",\"$3\",\"\",\"\",0,\"$4\",\"$5\"\)
 echo   root.exe -q -b  Fun4All_G4_Pass4Trk.C\($1,\"${dst_track}\",\"${dst_truth}\",\"\",\"\",0,\".\",\"${flavor}\"\)
