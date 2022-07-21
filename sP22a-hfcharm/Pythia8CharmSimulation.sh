@@ -4,7 +4,7 @@
 cp -R __Pythia8CharmSimulation/* .
 echo $@
 
-Executing on `hostname`
+echo Executing on `hostname`
 uname -a
 lscpu | grep \^CPU
 free -h --giga
@@ -20,6 +20,7 @@ export flavor=Charm
 export runnumber=1
 export maxAttempt=1
 export memory=8192
+export dumpTaskParams=Pythia8CharmSimulation.params.json
 
 
 echo START ${name} `date` 

@@ -9,6 +9,7 @@ Parameters:
   runnumber: 1
   maxAttempt: 1
   memory: 8192
+  dumpTaskParams: Pythia8CharmSimulation.params.json
 
 Resources:
   - file: ../MDC2/submit/HF_pp200_signal/pass1/rundir/*

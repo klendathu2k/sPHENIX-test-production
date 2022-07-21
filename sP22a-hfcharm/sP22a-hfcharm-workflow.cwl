@@ -16,16 +16,16 @@ steps:
     run: prun
     in:
         opt_exec:
-          default: "Pythia8CharmSimulation.sh  %RNDM:23000 >& _Pythia8CharmSimulation.log "
+          default: "Pythia8CharmSimulation.sh  %RNDM:24000 >& _Pythia8CharmSimulation.log "
         opt_args:
-          default: " --nJobs 1  --maxAttempt 1  --memory 8192  --outputs Pythia8CharmSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --nJobs 1  --maxAttempt 1  --memory 8192  --dumpTaskParams Pythia8CharmSimulation.params.json  --outputs Pythia8CharmSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
   Pythia8MinbSimulation:
     run: prun
     in:
         opt_exec:
-          default: "Pythia8MinbSimulation.sh  %RNDM:23000 >& _Pythia8MinbSimulation.log "
+          default: "Pythia8MinbSimulation.sh  %RNDM:24000 >& _Pythia8MinbSimulation.log "
         opt_args:
           default: " --nJobs 5  --maxAttempt 1  --outputs Pythia8MinbSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
@@ -40,7 +40,7 @@ steps:
         opt_secondaryDsTypes:
           default: [Pythia8MinbSimulation.outDS.tar]
         opt_exec:
-          default: "Pythia8CharmPileup.sh  %RNDM:23000 %IN %IN2 >& _Pythia8CharmPileup.log "
+          default: "Pythia8CharmPileup.sh  %RNDM:24000 %IN %IN2 >& _Pythia8CharmPileup.log "
         opt_args:
           default: " --maxAttempt 1  --outputs Pythia8Pileup.outDS.tar  --nFilesPerJob=1 --secondaryDSs IN2:5:%{DS1} --forceStaged  --forceStagedSecondary  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]

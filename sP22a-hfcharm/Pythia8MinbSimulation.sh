@@ -4,7 +4,7 @@
 cp -R __Pythia8MinbSimulation/* .
 echo $@
 
-Executing on `hostname`
+echo Executing on `hostname`
 uname -a
 lscpu | grep \^CPU
 free -h --giga
