@@ -16,6 +16,7 @@ export global_name=Pythia8Charm
 export global_build=mdc2.8
 export global_comment=Pythia8 Heavy Flavor (Charm) with Pileup
 export global_nEvents=10
+export global_nJobs=1
 
 
 export name=mergeOutputs

@@ -2,8 +2,8 @@ Parameters:
   name: Pythia8MinbSimulation
   build: mdc2.8
   comment: Generate Pythia8 Minb Events and run through F4A
-  nJobs:   5
-  nEvents: 1
+  nJobs:   $((5 * global_nJobs))
+  nEvents: $((5 * global_nEvents))
   macro: Fun4All_G4_Pass1_pp.C
   flavor: ppminbias  
   runnumber: 1

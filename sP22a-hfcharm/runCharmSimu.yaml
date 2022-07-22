@@ -2,8 +2,8 @@ Parameters:
   name: Pythia8CharmSimulation
   build: mdc2.8
   comment: Generate Pythia8 Charm Events and run through F4A
-  nJobs:   1     # create 10 jobs
-  nEvents: 1    # 100 events per job
+  nJobs:   ${global_nJobs}
+  nEvents: ${global_nEvents}
   macro: Fun4All_G4_HF_pp_signal.C
   flavor: Charm  
   runnumber: 1

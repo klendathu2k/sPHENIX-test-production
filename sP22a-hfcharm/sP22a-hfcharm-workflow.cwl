@@ -18,7 +18,7 @@ steps:
         opt_exec:
           default: "Pythia8CharmSimulation.sh  %RNDM:52000 >& _Pythia8CharmSimulation.log "
         opt_args:
-          default: " --nJobs 1  --maxAttempt 1  --memory 8192  --outputs Pythia8CharmSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --nJobs ${global_nJobs}  --maxAttempt 1  --memory 8192  --outputs Pythia8CharmSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
   Pythia8MinbSimulation:
@@ -27,7 +27,7 @@ steps:
         opt_exec:
           default: "Pythia8MinbSimulation.sh  %RNDM:52000 >& _Pythia8MinbSimulation.log "
         opt_args:
-          default: " --nJobs 5  --maxAttempt 1  --memory 8192  --outputs Pythia8MinbSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --nJobs $((5 * global_nJobs))  --maxAttempt 1  --memory 8192  --outputs Pythia8MinbSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
   Pythia8CharmPileup:

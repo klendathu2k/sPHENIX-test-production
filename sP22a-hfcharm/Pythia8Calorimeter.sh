@@ -16,6 +16,7 @@ export global_name=Pythia8Charm
 export global_build=mdc2.8
 export global_comment=Pythia8 Heavy Flavor (Charm) with Pileup
 export global_nEvents=10
+export global_nJobs=1
 
 
 export name=Pythia8Calorimeter
@@ -23,7 +24,7 @@ export build=mdc2.8
 export comment=This is a test job definition
 export macro=Fun4All_G4_Calo.C
 export flavor=Charm
-export nEvents=10
+export nEvents=${global_nEvents}
 export maxAttempt=3
 
 
