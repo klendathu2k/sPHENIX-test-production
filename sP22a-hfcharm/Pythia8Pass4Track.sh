@@ -12,19 +12,12 @@ free -h --giga
 export uniqueId=$1
 export IN1_name=Pythia8Pass3Track/outDS
 export IN1=(`echo $2 | tr "," " "`)
-export global_name=Pythia8Charm
-export global_build=mdc2.8
-export global_comment=Pythia8 Heavy Flavor (Charm) with Pileup
-export global_nEvents=10
-export global_nJobs=1
-
-
 export name=Pythia8Pass4Track
 export build=mdc2.8
 export comment=This is a test job definition
 export macro=Fun4All_G4_Trkr.C
 export flavor=Charm
-export nEvents=${global_nEvents}
+export nEvents=10
 export maxAttempt=3
 
 

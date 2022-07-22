@@ -14,19 +14,12 @@ export IN1_name=Pythia8CharmSimulation/outDS
 export IN1=(`echo $2 | tr "," " "`)
 export IN2_name=Pythia8MinbSimulation/outDS
 export IN2=(`echo $3 | tr "," " "`)
-export global_name=Pythia8Charm
-export global_build=mdc2.8
-export global_comment=Pythia8 Heavy Flavor (Charm) with Pileup
-export global_nEvents=10
-export global_nJobs=1
-
-
 export name=Pythia8CharmPileup
 export build=mdc2.8
 export comment=This is a test job definition
 export macro=Fun4All_G4_Pileup_pp.C
 export flavor=Charm
-export nEvents=${global_nEvents}
+export nEvents=10
 export maxAttempt=1
 
 
