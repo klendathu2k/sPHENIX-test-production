@@ -1,0 +1,14 @@
+SHREK Job Submission 2022-07-22 11:35:20.290834
+cmd args: 
+Namespace(yaml=['workflows/HF_pp200_signal/Globals.yaml', 'workflows/HF_pp200_signal/mergeOutputs.yaml', 'workflows/HF_pp200_signal/runCalorimeter.yaml', 'workflows/HF_pp200_signal/runCharmSimu.yaml', 'workflows/HF_pp200_signal/runMinbSimu.yaml', 'workflows/HF_pp200_signal/runPass3Track.yaml', 'workflows/HF_pp200_signal/runPass4Track.yaml', 'workflows/HF_pp200_signal/runPileup.yaml'], tag='sP22a-hfcharm', offset=53000, submit=True, check=True, handshake=True, vo='wlcg', site='BNL_OSG_SPHENIX', prodSourceLabel='test', workingGroup='sphenix', user='jwebb2', branch='test')
+subdir: 
+/direct/sphenix+u/jwebb2/work/2022/SHREK/sPHENIX-test-production/sP22a-hfcharm
+tag: 
+sP22a-hfcharm-e29ac05f-09d3-11ed-9192-00163e101048
+check:
+b'INFO : uploading workflow sandbox\nINFO : check workflow user.jwebb2.sP22a-hfcharm-e29ac05f-09d3-11ed-9192-00163e101048\nINFO : messages from the server\n2022-07-22 15:35:19.219586 : start /var/cache/pandaserver/workflow.0593945f-5882-4f5d-b3f1-b89bc09ae759\n2022-07-22 15:35:20.205214 : main execution failed with 2:2022-07-22 15:35:19,740\turllib3.connectionpool\tDEBUG\tStarting new HTTPS connection (1): pandaserver-doma.cern.ch:25443\n2022-07-22 15:35:19,759\turllib3.connectionpool\tDEBUG\thttps://pandaserver-doma.cern.ch:25443 "GET /cache/jobO.1fbc5a12-d7bc-4898-ad72-288b61ff279c.tar.gz HTTP/1.1" 200 3083\n2022-07-22 15:35:19,784\trdflib\tDEBUG\tRDFLib Version: 5.0.0\nusage: prun [options]\n    \n      HowTo is available at https://panda-wms.readthedocs.io/en/latest/client/prun.html\nprun: error: argument --nJobs: invalid int value: \'${global_nJobs}\'\n2022-07-22 15:35:20.207023 : failed to run with must be str, not NoneType Traceback (most recent call last):\n  File "/opt/panda/lib64/python3.6/site-packages/pandaserver/taskbuffer/workflow_processor.py", line 74, in process\n    dump_str = tmpLog.dumpToString() + dump_str\nTypeError: must be str, not NoneType\n\n\nERROR : workflow description is corrupted\n'
+b''
+submit:
+2022-07-22 15:35:25.058662
+b'INFO : uploading workflow sandbox\nINFO : gathering files under /direct/sphenix+u/jwebb2/work/2022/SHREK/sPHENIX-test-production/sP22a-hfcharm\nINFO : upload source files\nINFO : submit workflow user.jwebb2.sP22a-hfcharm-e29ac05f-09d3-11ed-9192-00163e101048\nINFO : request was accepted and will be processed in a few minutes\n'
+b''
