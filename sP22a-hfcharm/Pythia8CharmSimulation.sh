@@ -10,6 +10,12 @@ lscpu | grep \^CPU
 free -h --giga
 
 export uniqueId=$1
+export global_name=Pythia8Charm
+export global_build=mdc2.8
+export global_comment=Pythia8 Heavy Flavor (Charm) with Pileup
+export global_nEvents=10
+
+
 export name=Pythia8CharmSimulation
 export build=mdc2.8
 export comment=Generate Pythia8 Charm Events and run through F4A

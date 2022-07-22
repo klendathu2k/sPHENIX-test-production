@@ -12,6 +12,12 @@ export IN1_name=Pythia8Calorimeter/outDS
 export IN1=(`echo $2 | tr "," " "`)
 export IN2_name=Pythia8Pass4Track/outDS
 export IN2=(`echo $3 | tr "," " "`)
+export global_name=Pythia8Charm
+export global_build=mdc2.8
+export global_comment=Pythia8 Heavy Flavor (Charm) with Pileup
+export global_nEvents=10
+
+
 export name=mergeOutputs
 export build=mdc2.8
 export comment=Merge all outputs into a single tarball

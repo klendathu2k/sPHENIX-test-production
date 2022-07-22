@@ -12,6 +12,12 @@ free -h --giga
 export uniqueId=$1
 export IN1_name=Pythia8Pass3Track/outDS
 export IN1=(`echo $2 | tr "," " "`)
+export global_name=Pythia8Charm
+export global_build=mdc2.8
+export global_comment=Pythia8 Heavy Flavor (Charm) with Pileup
+export global_nEvents=10
+
+
 export name=Pythia8Pass4Track
 export build=mdc2.8
 export comment=This is a test job definition
