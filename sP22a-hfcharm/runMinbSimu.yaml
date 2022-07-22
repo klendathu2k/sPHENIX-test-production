@@ -2,7 +2,7 @@ Parameters:
   name: Pythia8MinbSimulation
   build: mdc2.8
   comment: Generate Pythia8 Minb Events and run through F4A
-  nJobs:   50
+  nJobs:   5
   nEvents: 25
   macro: Fun4All_G4_Pass1_pp.C
   flavor: ppminbias  
