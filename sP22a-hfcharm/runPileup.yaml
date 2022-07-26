@@ -5,6 +5,7 @@ Parameters:
   macro: Fun4All_G4_Pileup_pp.C
   flavor: Charm  
   nEvents: 10
+  nJObs: 10
   maxAttempt: 1
  
 InputDataSets:

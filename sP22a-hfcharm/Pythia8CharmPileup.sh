@@ -20,6 +20,7 @@ export comment=This is a test job definition
 export macro=Fun4All_G4_Pileup_pp.C
 export flavor=Charm
 export nEvents=10
+export nJObs=10
 export maxAttempt=1
 
 
