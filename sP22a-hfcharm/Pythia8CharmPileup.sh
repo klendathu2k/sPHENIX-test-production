@@ -19,7 +19,6 @@ export build=mdc2.8
 export comment=This is a test job definition
 export macro=Fun4All_G4_Pileup_pp.C
 export flavor=Charm
-export nJobs=2
 export nEvents=10
 export maxAttempt=1
 

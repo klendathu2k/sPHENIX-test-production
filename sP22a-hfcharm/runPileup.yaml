@@ -4,7 +4,6 @@ Parameters:
   comment: This is a test job definition
   macro: Fun4All_G4_Pileup_pp.C
   flavor: Charm  
-  nJobs: 2
   nEvents: 10
   maxAttempt: 1
  
