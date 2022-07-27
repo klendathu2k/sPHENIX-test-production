@@ -13,6 +13,7 @@ InputDataSets:
     match: Pythia8CharmSimulation.outDS.tar
     nFilesPerJob: 1
   - name: Pythia8MinbSimulation/outDS
+    reusable: true
     match: Pythia8MinbSimulation.outDS.tar
     nFilesPerJob: 5
 
