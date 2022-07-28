@@ -2,7 +2,7 @@ Parameters:
   name: Pythia8CharmSimulation
   build: mdc2.8
   comment: Generate Pythia8 Charm Events and run through F4A
-  nJobs:   10
+  nJobs:   1
   nEvents: 10
   macro: Fun4All_G4_HF_pp_signal.C
   flavor: Charm  
