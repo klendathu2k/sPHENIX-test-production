@@ -22,7 +22,7 @@ steps:
           default: " --nJobs 10  --maxAttempt 3  --memory 8192  --outputs Pythia8CharmSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
-# step count = 0
+# step count = 1
   Pythia8MinbSimulation:
     run: prun
     in:
@@ -32,7 +32,7 @@ steps:
           default: " --nJobs 50  --maxAttempt 3  --memory 8192  --outputs Pythia8MinbSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
-# step count = 0
+# step count = 2
   Pythia8CharmPileup:
     run: prun
     in:
@@ -48,7 +48,7 @@ steps:
           default: " --nJobs 10  --maxAttempt 5  --memory 8192  --outputs Pythia8Pileup.outDS.tar  --nFilesPerJob=1 --secondaryDSs IN2:5:%{DS1} --forceStaged  --forceStagedSecondary  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
-# step count = 0
+# step count = 3
   Pythia8Calorimeter:
     run: prun
     in:
@@ -61,7 +61,7 @@ steps:
           default: " --maxAttempt 3  --outputs Pythia8Calorimeter.outDS.tar  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
-# step count = 0
+# step count = 4
   Pythia8Pass3Track:
     run: prun
     in:
@@ -74,7 +74,7 @@ steps:
           default: " --maxAttempt 3  --outputs Pythia8Pass3Track.outDS.tar  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
-# step count = 0
+# step count = 5
   Pythia8Pass4Track:
     run: prun
     in:
@@ -87,7 +87,7 @@ steps:
           default: " --maxAttempt 3  --outputs Pythia8Pass4Track.outDS.tar  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
-# step count = 0
+# step count = 6
   mergeOutputs:
     run: prun
     in:
