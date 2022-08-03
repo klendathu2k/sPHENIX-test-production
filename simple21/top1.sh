@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 echo $@
+
+echo Executing on `hostname`
+uname -a
+lscpu | grep \^CPU
+free -h --giga
+
 export uniqueId=$1
 export name=top1
 export comment=Simple chain from panda examples

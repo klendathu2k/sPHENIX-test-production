@@ -12,6 +12,7 @@ outputs:
     outputSource: bottom/outDS
 
 steps:
+# step count = 0
   top1:
     run: prun
     in:
@@ -21,6 +22,7 @@ steps:
           default: " --nJobs 1  --maxAttempt 1  --outputs top1outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
+# step count = 1
   top2:
     run: prun
     in:
@@ -30,6 +32,7 @@ steps:
           default: " --nJobs 1  --maxAttempt 1  --outputs top2outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
+# step count = 2
   bottom:
     run: prun
     in:

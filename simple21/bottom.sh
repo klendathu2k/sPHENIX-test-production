@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 echo $@
+
+echo Executing on `hostname`
+uname -a
+lscpu | grep \^CPU
+free -h --giga
+
 export uniqueId=$1
 export IN1_name=top1/outDS
 export IN1=(`echo $2 | tr "," " "`)
