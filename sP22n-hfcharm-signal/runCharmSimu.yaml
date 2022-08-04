@@ -16,14 +16,14 @@ Resources:
 
 
 OutputDataSets:
-  - name: Pythia8CharmSimu/outDS
+  - name: Pythia8CharmSimulation/outDS
     comment: Pythia8 events
     filelist:
-       - "required:Pythia8CharmSimu.outDS.tar"
+       - "required:Pythia8CharmSimulation.outDS.tar"
 
 
 JobCommands: |-
-  echo START ${shrek_tag} ${name} `date` 
+  echo START ${name} `date` 
 
   # Initialize sPHENIX software environment
   source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
@@ -41,7 +41,7 @@ JobCommands: |-
 
 
   # Add output to the tar file
-  tar cvf Pythia8CharmSimu.outDS.tar ${filename}
+  tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
   ls -l
  
   echo END   ${name} `date` 
