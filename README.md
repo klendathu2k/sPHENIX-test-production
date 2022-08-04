@@ -93,3 +93,4 @@
 |sP22n-hfcharm-background|2022-08-04 18:12:44.007099|[a0f2edc](https://github.com/klendathu2k/sPHENIX-test-production/tree/a0f2edc/sP22n-hfcharm-background)|jwebb2|
 |simple21|2022-08-04 18:22:13.119530|[359fe63](https://github.com/klendathu2k/sPHENIX-test-production/tree/359fe63/simple21)|jwebb2|
 |sP22n-hfcharm-pileup|2022-08-04 18:42:13.509743|[1819282](https://github.com/klendathu2k/sPHENIX-test-production/tree/1819282/sP22n-hfcharm-pileup)|jwebb2|
+|sP22n-hfcharm-signal|2022-08-04 19:04:32.075124|[718be99](https://github.com/klendathu2k/sPHENIX-test-production/tree/718be99/sP22n-hfcharm-signal)|jwebb2|
