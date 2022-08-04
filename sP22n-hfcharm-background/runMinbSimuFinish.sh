@@ -10,13 +10,14 @@ free -h --giga
 export uniqueId=$1
 export IN1_name=Pythia8MinbSimu/outDS
 export IN1=(`echo $2 | tr "," " "`)
+export shrek_tag=sP22n-hfcharm-background
 export name=runMinbSimuFinish
 export build=mdc2.8
 export comment=Finish task of the minb simulation
 export maxAttempt=3
 
 
-echo START ${name} `date` 
+echo START ${shrek_tag} ${name} `date` 
 
 # Initialize sPHENIX software environment
 source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}

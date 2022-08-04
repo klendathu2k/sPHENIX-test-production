@@ -10,6 +10,7 @@ lscpu | grep \^CPU
 free -h --giga
 
 export uniqueId=$1
+export shrek_tag=sP22n-hfcharm-background
 export name=Pythia8MinbSimulation
 export build=mdc2.8
 export comment=Generate Pythia8 Minb Events and run through F4A
@@ -22,7 +23,7 @@ export maxAttempt=3
 export memory=8192
 
 
-echo START ${name} `date` 
+echo START ${shrek_tag} ${name} `date` 
 
 # Initialize sPHENIX software environment
 source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
@@ -43,7 +44,7 @@ filename=G4Hits-${flavor}-${rn}-${sn}.root
 root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) 
 #touch $filename
 
-tar cvf Pythia8MinbSimulation.outDS.tar ${filename}  
+tar cvf Pythia8MinbSimu.outDS.tar ${filename}  
 ls -l
 
 echo END   ${name} `date` 

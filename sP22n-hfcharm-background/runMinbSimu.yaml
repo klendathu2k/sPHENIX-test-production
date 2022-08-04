@@ -16,14 +16,14 @@ Resources:
 
 
 OutputDataSets:
-  - name: Pythia8MinbSimulation/outDS
+  - name: Pythia8MinbSimu/outDS
     comment: Pythia8 events
     filelist:
-       - "required:Pythia8MinbSimulation.outDS.tar"
+       - "required:Pythia8MinbSimu.outDS.tar"
 
 
 JobCommands: |-
-  echo START ${name} `date` 
+  echo START ${shrek_tag} ${name} `date` 
 
   # Initialize sPHENIX software environment
   source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
@@ -44,7 +44,7 @@ JobCommands: |-
   root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) 
   #touch $filename
 
-  tar cvf Pythia8MinbSimulation.outDS.tar ${filename}  
+  tar cvf Pythia8MinbSimu.outDS.tar ${filename}  
   ls -l
 
   echo END   ${name} `date` 
