@@ -16,10 +16,10 @@ Resources:
 
 
 OutputDataSets:
-  - name: Pythia8CharmSimulation/outDS
+  - name: Pythia8CharmSimu/outDS
     comment: Pythia8 events
     filelist:
-       - "required:Pythia8CharmSimulation.outDS.tar"
+       - "required:Pythia8CharmSimu.outDS.tar"
 
 
 JobCommands: |-

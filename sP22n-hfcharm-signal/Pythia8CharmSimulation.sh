@@ -10,7 +10,7 @@ lscpu | grep \^CPU
 free -h --giga
 
 export uniqueId=$1
-export name=Pythia8CharmSimulation
+export shrek_tag=sP22n-hfcharm-signalexport name=Pythia8CharmSimulation
 export build=mdc2.8
 export comment=Generate Pythia8 Charm Events and run through F4A
 export nJobs=10
