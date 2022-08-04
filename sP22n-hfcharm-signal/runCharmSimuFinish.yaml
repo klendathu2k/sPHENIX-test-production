@@ -16,7 +16,7 @@ OutputDataSets:
     - "required:Pythia8CharmSimuFinish.outDS.txt"
 
 JobCommands: |-
-  echo START ${name} `date` 
+  echo START ${shrek_tag} ${name} `date` 
 
   # Initialize sPHENIX software environment
   source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}

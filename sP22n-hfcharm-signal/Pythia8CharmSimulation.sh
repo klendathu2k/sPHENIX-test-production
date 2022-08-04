@@ -23,7 +23,7 @@ export maxAttempt=3
 export memory=8192
 
 
-echo START ${name} `date` 
+echo START ${shrek_tag} ${name} `date` 
 
 # Initialize sPHENIX software environment
 source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
@@ -41,7 +41,7 @@ root.exe -q -b ${macro}\($nEvents,\"${flavor}\",\"${filename}\",\"\",0,\".\"\)
 
 
 # Add output to the tar file
-tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
+tar cvf Pythia8CharmSimu.outDS.tar ${filename}
 ls -l
 
 echo END   ${name} `date` 

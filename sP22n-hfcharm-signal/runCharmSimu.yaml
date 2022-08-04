@@ -23,7 +23,7 @@ OutputDataSets:
 
 
 JobCommands: |-
-  echo START ${name} `date` 
+  echo START ${shrek_tag} ${name} `date` 
 
   # Initialize sPHENIX software environment
   source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
@@ -41,7 +41,7 @@ JobCommands: |-
 
 
   # Add output to the tar file
-  tar cvf Pythia8CharmSimulation.outDS.tar ${filename}
+  tar cvf Pythia8CharmSimu.outDS.tar ${filename}
   ls -l
  
   echo END   ${name} `date` 

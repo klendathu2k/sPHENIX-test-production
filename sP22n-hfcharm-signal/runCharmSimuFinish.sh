@@ -17,7 +17,7 @@ export comment=Finish task of the charm simulation
 export maxAttempt=3
 
 
-echo START ${name} `date` 
+echo START ${shrek_tag} ${name} `date` 
 
 # Initialize sPHENIX software environment
 source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
