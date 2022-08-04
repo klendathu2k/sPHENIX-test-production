@@ -10,7 +10,8 @@ free -h --giga
 export uniqueId=$1
 export IN1_name=Pythia8CharmSimu/outDS
 export IN1=(`echo $2 | tr "," " "`)
-export shrek_tag=sP22n-hfcharm-signalexport name=runCharmSimuFinish
+export shrek_tag=sP22n-hfcharm-signal
+export name=runCharmSimuFinish
 export build=mdc2.8
 export comment=Finish task of the charm simulation
 export maxAttempt=3

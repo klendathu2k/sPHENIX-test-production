@@ -46,5 +46,5 @@ JobCommands: |-
  
   echo END   ${name} `date` 
 
-  cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
+  cp _${name}.log /sphenix/u/sphnxpro/shrek/${shrek_tag}-${name}-${uniqueId}.log
 

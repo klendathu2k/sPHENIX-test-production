@@ -10,7 +10,8 @@ lscpu | grep \^CPU
 free -h --giga
 
 export uniqueId=$1
-export shrek_tag=sP22n-hfcharm-signalexport name=Pythia8CharmSimulation
+export shrek_tag=sP22n-hfcharm-signal
+export name=Pythia8CharmSimulation
 export build=mdc2.8
 export comment=Generate Pythia8 Charm Events and run through F4A
 export nJobs=10
@@ -45,4 +46,4 @@ ls -l
 
 echo END   ${name} `date` 
 
-cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
+cp _${name}.log /sphenix/u/sphnxpro/shrek/${shrek_tag}-${name}-${uniqueId}.log
