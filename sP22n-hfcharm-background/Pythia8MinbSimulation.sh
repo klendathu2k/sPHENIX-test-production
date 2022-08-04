@@ -23,7 +23,7 @@ export maxAttempt=3
 export memory=8192
 
 
-echo START ${shrek_tag} ${name} `date` 
+echo START ${name} `date` 
 
 # Initialize sPHENIX software environment
 source /opt/sphenix/core/bin/sphenix_setup.sh -n ${build}
@@ -44,9 +44,9 @@ filename=G4Hits-${flavor}-${rn}-${sn}.root
 root.exe -q -b ${macro}\($nEvents,\"${hepmc}\",\"${filename}\",\"\",0,\".\"\) 
 #touch $filename
 
-tar cvf Pythia8MinbSimu.outDS.tar ${filename}  
+tar cvf Pythia8MinbSimulation.outDS.tar ${filename}  
 ls -l
 
 echo END   ${name} `date` 
 
-cp _${name}.log /sphenix/u/sphnxpro/shrek/${name}-${uniqueId}.log
+cp _${name}.log /sphenix/u/sphnxpro/shrek/${shrek_tag}-${name}-${uniqueId}.log
