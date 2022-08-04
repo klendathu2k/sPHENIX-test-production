@@ -8,6 +8,7 @@ lscpu | grep \^CPU
 free -h --giga
 
 export uniqueId=$1
+export shrek_tag=simple21
 export name=top2
 export comment=Simple chain from panda examples
 export nJobs=1
