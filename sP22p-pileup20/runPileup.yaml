@@ -10,11 +10,11 @@ Parameters:
   memory: 8192
  
 InputDataSets:
-  - name: Pythia8CharmSimulation/outDS
+  - name: Pythia8CharmSignal
     datasets: user.jwebb2.sP22p-signal20_000_Pythia8CharmSimulation_Pythia8CharmSimulation.outDS.tar
     match: Pythia8CharmSimulation.outDS.tar
     nFilesPerJob: 1
-  - name: Pythia8MinbSimulation/outDS
+  - name: Pythia8Background
     datasets: user.jwebb2.sP22p-background20_000_Pythia8MinbSimulation_Pythia8MinbSimulation.outDS.tar
     reusable: true
     match: Pythia8MinbSimulation.outDS.tar

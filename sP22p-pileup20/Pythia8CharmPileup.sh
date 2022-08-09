@@ -10,9 +10,9 @@ lscpu | grep \^CPU
 free -h --giga
 
 export uniqueId=$1
-export IN1_name=Pythia8CharmSimulation/outDS
+export IN1_name=Pythia8CharmSignal
 export IN1=(`echo $2 | tr "," " "`)
-export IN2_name=Pythia8MinbSimulation/outDS
+export IN2_name=Pythia8Background
 export IN2=(`echo $3 | tr "," " "`)
 export shrek_tag=sP22p-pileup20
 export name=Pythia8CharmPileup

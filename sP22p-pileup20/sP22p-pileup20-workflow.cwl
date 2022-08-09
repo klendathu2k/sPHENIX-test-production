@@ -4,11 +4,11 @@ class: Workflow
     
 requirements:
   MultipleInputFeatureRequirement: {}
-# Pythia8CharmPileup : input=Pythia8CharmSimulation/outDS
-# Pythia8CharmPileup : input=Pythia8MinbSimulation/outDS
+# Pythia8CharmPileup : input=Pythia8CharmSignal
+# Pythia8CharmPileup : input=Pythia8Background
 inputs:
-  Pythia8CharmSimulation/outDS: string
-  Pythia8MinbSimulation/outDS: string
+  Pythia8CharmSignal: string
+  Pythia8Background: string
 
 # mergeOutputs : output=Pythia8CharmOutput/outDS
 outputs:
@@ -20,10 +20,10 @@ steps:
   Pythia8CharmPileup:
     run: prun
     in:
-        opt_inDS: Pythia8CharmSimulation/outDS
+        opt_inDS: Pythia8CharmSignal
         opt_inDsType:
           default: Pythia8CharmSimulation.outDS.tar
-        opt_secondaryDSs: [Pythia8MinbSimulation/outDS]
+        opt_secondaryDSs: [Pythia8Background]
         opt_secondaryDsTypes:
           default: [Pythia8MinbSimulation.outDS.tar]
         opt_exec:
