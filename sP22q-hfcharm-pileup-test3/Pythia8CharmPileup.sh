@@ -21,7 +21,7 @@ export comment=This is a test job definition
 export macro=Fun4All_G4_Pileup_pp.C
 export flavor=Charm
 export nEvents=10
-export nFiles=10
+export nFiles=50
 export maxAttempt=5
 export memory=8192
 

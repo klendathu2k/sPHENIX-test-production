@@ -5,7 +5,7 @@ Parameters:
   macro: Fun4All_G4_Pileup_pp.C
   flavor: Charm  
   nEvents: 10
-  nFiles: 10
+  nFiles: 50
   maxAttempt: 5
   memory: 8192
  
