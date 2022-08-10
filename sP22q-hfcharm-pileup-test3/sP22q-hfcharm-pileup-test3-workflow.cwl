@@ -29,7 +29,7 @@ steps:
         opt_exec:
           default: "Pythia8CharmPileup.sh  %RNDM:200000 %IN %IN2 >& _Pythia8CharmPileup.log "
         opt_args:
-          default: " --nFiles 10  --maxAttempt 5  --memory 8192  --outputs Pythia8Pileup.outDS.tar  --nFilesPerJob=1 --secondaryDSs IN2:50:%{DS1} --forceStaged  --forceStagedSecondary  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --nFiles 10  --maxAttempt 5  --memory 8192  --outputs Pythia8Pileup.outDS.tar  --nFilesPerJob=1 --secondaryDSs IN2:50:%{DS1} --reusableSecondaries DS1 --forceStaged  --forceStagedSecondary  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
   Pythia8Calorimeter:
