@@ -10,7 +10,7 @@ Parameters:
  
 InputDataSets:
   - name: Pythia8CharmSignal
-    datasets: user.jwebb2.sP22q-signal_000_Pythia8CharmSimulation
+    datasets: user.jwebb2.sP22q-signal_000_Pythia8CharmSimulation,user.jwebb2.sP22q-signal_000_Pythia8CharmSimulation,user.jwebb2.sP22q-signal_000_Pythia8CharmSimulation,user.jwebb2.sP22q-signal_000_Pythia8CharmSimulation
     match: Pythia8CharmSimulation.outDS.tar
     nFilesPerJob: 1
   - name: Pythia8Background
