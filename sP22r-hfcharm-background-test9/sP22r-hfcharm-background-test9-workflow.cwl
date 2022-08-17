@@ -16,7 +16,7 @@ steps:
     run: prun
     in:
         opt_exec:
-          default: "Pythia8MinbSimulation.sh  %RNDM:0 >& _Pythia8MinbSimulation.log "
+          default: "Pythia8MinbSimulation.sh  %RNDM:100 >& _Pythia8MinbSimulation.log "
         opt_args:
           default: " --nJobs 100  --maxAttempt 3  --memory 8192  --maxWalltime 48  --cpuTimePerEvent 75000  --outputs Pythia8MinbSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
@@ -28,7 +28,7 @@ steps:
         opt_inDsType:
           default: Pythia8MinbSimulation.outDS.tar
         opt_exec:
-          default: "FinishMinbSimu.sh  %RNDM:0 %IN >& _FinishMinbSimu.log "
+          default: "FinishMinbSimu.sh  %RNDM:100 %IN >& _FinishMinbSimu.log "
         opt_args:
           default: " --maxAttempt 5  --outputs FiniahPythia8MinbSimu.outDS.txt  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
