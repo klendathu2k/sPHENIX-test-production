@@ -12,11 +12,11 @@ Parameters:
  
 InputDataSets:
   - name: Pythia8CharmSignal
-    datasets: user.jwebb2.sP22r-hfcharm-signal-test4_000_Pythia8CharmSimulation
+    datasets: user.jwebb2.sP22s-hfcharm-signal-test1_000_Pythia8CharmSimulation
     match: Pythia8CharmSimulation.outDS.tar
     nFilesPerJob: 1
   - name: Pythia8Background
-    datasets: user.jwebb2.sP22r-hfcharm-background-test9_000_Pythia8MinbSimulation
+    datasets: user.jwebb2.sP22s-hfcharm-background-test9_000_Pythia8MinbSimulation
     reusable: true
     match: Pythia8MinbSimulation.outDS.tar
     nFilesPerJob: 99
