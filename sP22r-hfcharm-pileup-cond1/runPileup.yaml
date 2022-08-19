@@ -16,7 +16,7 @@ InputDataSets:
     match: Pythia8CharmSimulation.outDS.tar
     nFilesPerJob: 1
   - name: Pythia8Background
-    datasets: user.jwebb2.sP22s-hfcharm-background-test9_000_Pythia8MinbSimulation
+    datasets: user.jwebb2.sP22s-hfcharm-background-test1_000_Pythia8MinbSimulation
     reusable: true
     match: Pythia8MinbSimulation.outDS.tar
     nFilesPerJob: 99
