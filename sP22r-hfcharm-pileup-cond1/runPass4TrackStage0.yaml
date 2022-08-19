@@ -7,6 +7,7 @@ Parameters:
   nEvents: 10
   maxAttempt: 3
   runnumber: 1
+  when: "$(self.opt_inDS)"
 
 InputDataSets:
   - name: Pythia8Pass3Track/outDS
