@@ -67,7 +67,6 @@ steps:
         opt_args:
           default: " --maxAttempt 3  --outputs Pythia8Pass4TrackStage0.outDS.tar  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
-    when: $(self.opt_inDS)
 
   Pythia8Pass4TrackStageA:
     run: prun
