@@ -5,30 +5,30 @@ class: Workflow
 requirements:
   MultipleInputFeatureRequirement: {}
 inputs: []
-# FinishCharmSimu : output=FinishPythia8CharmSimu/outDS
+# FinishMinbSimu : output=FinishPythia8MinbSimu/outDS
 outputs:
   outDS:
     type: string
-    outputSource: FinishPythia8CharmSimu/outDS
+    outputSource: FinishPythia8MinbSimu/outDS
 
 steps:
-  Pythia8CharmSimulation:
+  Pythia8MinbSimulation:
     run: prun
     in:
         opt_exec:
-          default: "Pythia8CharmSimulation.sh  %RNDM:0 >& _Pythia8CharmSimulation.log "
+          default: "Pythia8MinbSimulation.sh  %RNDM:0 >& _Pythia8MinbSimulation.log "
         opt_args:
-          default: " --nJobs 200  --maxAttempt 1  --memory 8192  --outputs Pythia8CharmSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --nJobs 100  --maxAttempt 1  --memory 8192  --outputs Pythia8MinbSimulation.outDS.tar  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]
 
-  FinishCharmSimu:
+  FinishMinbSimu:
     run: prun
     in:
-        opt_inDS: Pythia8CharmSimulation/outDS
+        opt_inDS: Pythia8MinbSimulation/outDS
         opt_inDsType:
-          default: Pythia8CharmSimulation.outDS.tar
+          default: Pythia8MinbSimulation.outDS.tar
         opt_exec:
-          default: "FinishCharmSimu.sh  %RNDM:0 %IN >& _FinishCharmSimu.log "
+          default: "FinishMinbSimu.sh  %RNDM:0 %IN >& _FinishMinbSimu.log "
         opt_args:
-          default: " --maxAttempt 5  --outputs FiniahPythia8CharmSimu.outDS.txt  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
+          default: " --maxAttempt 5  --outputs FiniahPythia8MinbSimu.outDS.txt  --nFilesPerJob=1 --forceStaged  --site BNL_OSG_SPHENIX --avoidVP --noBuild "
     out: [outDS]

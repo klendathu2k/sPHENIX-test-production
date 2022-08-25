@@ -1,19 +1,19 @@
 Parameters:
-  name: FinishCharmSimu
+  name: FinishMinbSimu
   build: ana.315
   comment: This is a test job definition
   maxAttempt: 5
  
 InputDataSets:
-  - name: Pythia8CharmSimulation/outDS
-    match: Pythia8CharmSimulation.outDS.tar
+  - name: Pythia8MinbSimulation/outDS
+    match: Pythia8MinbSimulation.outDS.tar
     nFilesPerJob: 1
 
 OutputDataSets:
-  - name: FinishPythia8CharmSimu/outDS
-    comment: Charm events plus minbias pileup
+  - name: FinishPythia8MinbSimu/outDS
+    comment: Minb events plus minbias pileup
     filelist:
-    - "required:FiniahPythia8CharmSimu.outDS.txt"
+    - "required:FiniahPythia8MinbSimu.outDS.txt"
 
 Resources:
   - file: ../MDC2/submit/HF_pp200_signal/pass2/rundir/*
@@ -31,11 +31,12 @@ JobCommands: |-
   echo ARGV:       $@       
   echo Signal:     ${IN1[@]}  
 
-  tar xvf ${mcin} > FiniahPythia8CharmSimu.outDS.txt 
+  tar xvf ${mcin} > FiniahPythia8MinbSimu.outDS.txt 
 
   echo END   ${name} `date` 
 
-  cp _${name}.log /sphenix/u/sphnxpro/shrek/${shrek_tag}-${name}-${uniqueId}.log
+  mkdir /sphenix/u/sphnxpro/shrek/${shrek_tag}-${name}-${uniqueId}
+  cp _${name}.log /sphenix/u/sphnxpro/shrek/${shrek_tag}-${name}-${uniqueId}/${shrek_tag}-${name}-${uniqueId}.log
 
 
  
